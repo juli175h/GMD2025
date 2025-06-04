@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5ebddef10caa2f54ea20493b0128668a
+guid: be9421e02f6ca8648bb8711c357fdb01
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -22297447652362499
-    second: splatter_0
+      213: 8918690243382714249
+    second: SpeedBoostIcon_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: splatter_0
+      name: SpeedBoostIcon_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 30
-        height: 17
+        width: 173
+        height: 165
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: df67849e698c0bff0800000000000000
-      internalID: -22297447652362499
+      spriteID: 98f919ae58d85cb70800000000000000
+      internalID: 8918690243382714249
       vertices: []
       indices: 
       edges: []
@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SpeedBoostIcon_0: 8918690243382714249
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

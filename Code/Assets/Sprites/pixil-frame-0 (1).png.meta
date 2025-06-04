@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: be9421e02f6ca8648bb8711c357fdb01
+guid: 9ad8ca7cc4a75b34da0a0c8bbd4ce491
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8918690243382714249
-    second: SpeedBoostIcon_0
+      213: 4483504832982471387
+    second: pixil-frame-0 (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SpeedBoostIcon_0
+      name: pixil-frame-0 (1)_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 173
-        height: 165
+        x: 269
+        y: 94
+        width: 167
+        height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 98f919ae58d85cb70800000000000000
-      internalID: 8918690243382714249
+      spriteID: bd2daa614eb983e30800000000000000
+      internalID: 4483504832982471387
       vertices: []
       indices: 
       edges: []
@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pixil-frame-0 (1)_0: 4483504832982471387
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

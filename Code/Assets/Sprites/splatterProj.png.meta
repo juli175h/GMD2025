@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9a5aa8056263b0e4bb9923e332bfa9fa
+guid: 2191a4ddc5255b34dbcc5eefd91d88ba
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8586824727787019205
-    second: splatter 1_0
+      213: 102522795479252320
+    second: splatterProj_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: splatter 1_0
+      name: splatterProj_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 53
-        height: 31
+        x: 13
+        y: 40
+        width: 26
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5cb194058978a2770800000000000000
-      internalID: 8586824727787019205
+      spriteID: 06dbbe570fb3c6100800000000000000
+      internalID: 102522795479252320
       vertices: []
       indices: 
       edges: []
@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      splatterProj_0: 102522795479252320
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
