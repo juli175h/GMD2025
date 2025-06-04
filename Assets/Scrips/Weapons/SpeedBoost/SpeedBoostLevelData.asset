@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dafe9057ade24f045bb4b91a93af4730, type: 3}
+  m_Name: SpeedBoostLevelData
+  m_EditorClassIdentifier: 
+  levels:
+  - levelDescription: 
+    cooldown: 0
+    speedAmp: 0
+    duration: 0
+  - levelDescription: Momentarily speed boost activate on x/blue
+    cooldown: 7
+    speedAmp: 1.5
+    duration: 0.4
+  - levelDescription: Speed boost lasts longer
+    cooldown: 7
+    speedAmp: 1.5
+    duration: 0.6
+  - levelDescription: shorter cooldown and longer duration
+    cooldown: 6
+    speedAmp: 1.5
+    duration: 0.75
+  - levelDescription: More speed shorter cooldown
+    cooldown: 6
+    speedAmp: 1.8
+    duration: 0.9
+  - levelDescription: More speed shorter cooldown and longer duration
+    cooldown: 5
+    speedAmp: 2
+    duration: 1

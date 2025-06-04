@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee3a5219ada5bf042962d4c18be0e961, type: 3}
+  m_Name: GamePhaseDataSO
+  m_EditorClassIdentifier: 
+  Phases:
+  - endTime: 20
+    enemy_normal_spawntime: 5
+    enemy_speed_spawntime: 40
+    enemy_giant_spawntime: 500
+    enemy_speed_cluster_spawntime: 0
+  - endTime: 45
+    enemy_normal_spawntime: 3.75
+    enemy_speed_spawntime: 20
+    enemy_giant_spawntime: 500
+    enemy_speed_cluster_spawntime: 0
+  - endTime: 50
+    enemy_normal_spawntime: 1
+    enemy_speed_spawntime: 15
+    enemy_giant_spawntime: 500
+    enemy_speed_cluster_spawntime: 0
+  - endTime: 80
+    enemy_normal_spawntime: 3
+    enemy_speed_spawntime: 15
+    enemy_giant_spawntime: 500
+    enemy_speed_cluster_spawntime: 0
+  - endTime: 135
+    enemy_normal_spawntime: 3
+    enemy_speed_spawntime: 15
+    enemy_giant_spawntime: 50
+    enemy_speed_cluster_spawntime: 0
+  - endTime: 200
+    enemy_normal_spawntime: 3
+    enemy_speed_spawntime: 15
+    enemy_giant_spawntime: 5
+    enemy_speed_cluster_spawntime: 0
+  - endTime: 210
+    enemy_normal_spawntime: 1
+    enemy_speed_spawntime: 3.5
+    enemy_giant_spawntime: 1
+    enemy_speed_cluster_spawntime: 0
+  - endTime: 260
+    enemy_normal_spawntime: 3
+    enemy_speed_spawntime: 20
+    enemy_giant_spawntime: 5
+    enemy_speed_cluster_spawntime: 0
+  - endTime: 330
+    enemy_normal_spawntime: 3
+    enemy_speed_spawntime: 15
+    enemy_giant_spawntime: 50
+    enemy_speed_cluster_spawntime: 0
