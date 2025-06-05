@@ -78,9 +78,7 @@ public class SpeedBoostWeaponController : Weapon
     {
         if (isUp)
         {
-            
             StartCoroutine(SpeedBoost());
-            
             isUp = false;
         }
     }

@@ -31,15 +31,6 @@ public class EnemyController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (isPushedBack)
-        {
-            pushBackTimer -= Time.fixedDeltaTime;
-            if (pushBackTimer <= 0f)
-                isPushedBack = false;
-
-            return; // Skip movement during pushback
-        }
-
         Vector3 direction = (target.position - transform.position).normalized;
         rg.linearVelocity = direction * speed;
 
@@ -48,7 +39,6 @@ public class EnemyController : MonoBehaviour
         else if (direction.x < 0 && isFacingRight)
             Flip();
     }
-
 
 
 

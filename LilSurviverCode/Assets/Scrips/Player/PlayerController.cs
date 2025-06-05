@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     public InputAction MoveAction;
+    private Vector2 moveInput;
     public Animator animator;
 
     [HideInInspector]
@@ -12,6 +13,12 @@ public class PlayerController : MonoBehaviour
     public bool hasImmunity = false;
 
     public float movementSpeed = 6.0f;
+    private Rigidbody2D rb;
+
+    void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,23 +28,25 @@ public class PlayerController : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-
     {
-        Vector2 move = MoveAction.ReadValue<Vector2>();
-        animator.SetFloat("Speed", Mathf.Abs(move.x)+ Mathf.Abs(move.y));
-        Vector2 position = (Vector2)transform.position + move * movementSpeed * Time.deltaTime;
-        transform.position = position;
+        moveInput = MoveAction.ReadValue<Vector2>();
+        animator.SetFloat("Speed", Mathf.Abs(moveInput.x) + Mathf.Abs(moveInput.y));
 
-        if (move.x > 0 && !isFacingRight)
+        if (moveInput.x > 0 && !isFacingRight)
         {
             FlipPlayer();
         }
-        else if (move.x < 0 && isFacingRight)
+        else if (moveInput.x < 0 && isFacingRight)
         {
             FlipPlayer();
         }
     }
- 
+
+    void FixedUpdate()
+    {
+        rb.MovePosition(rb.position + moveInput * movementSpeed * Time.fixedDeltaTime);
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("trigger exp"+ other.name);
