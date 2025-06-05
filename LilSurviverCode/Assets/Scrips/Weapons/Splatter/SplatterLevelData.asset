@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SplatterLevelData
   m_EditorClassIdentifier: 
   levels:
-  - levelDescription: level 0
+  - levelDescription: Not Active
     attackSpeed: 0
     duration: 0
     tickRate: 0

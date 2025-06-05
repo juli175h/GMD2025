@@ -22,7 +22,7 @@ Each weapon uses a ScriptableObject to define how it evolves, including paramete
 The game features three main enemy types:
 
 - **Normal Zombies**: Standard movement and health.  
-- **Speed Zombies**: Move faster to quickly close the gap.  
+- **Speed Zombies**: Moves almost as fast as the player
 - **Tough (Giant) Zombies**: Slower, but with significantly higher health.
 
 Enemy waves evolve over time using a phase-based system defined in a `GamePhaseDataSO`. As each phase ends, the next begins with updated spawn intervals, increasing the game’s difficulty. This setup enables the challenge to scale smoothly across the session.

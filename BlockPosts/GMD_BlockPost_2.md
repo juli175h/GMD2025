@@ -22,6 +22,7 @@ Physics will be simple 2D collision detection for movement, projectiles, and are
 ## Assets  
 Free assets from Unity Store will be utilized, as well as assets found on the internet end self-made assets.  
 - **Visuals**: 2D pixel art for characters, weapons and enemies. Cute aesthetic, contrasting the dark concept of the game.  
+![Start menu showing assets](Images//StartScreen.png)
 - **Audio**: Retro-inspired music loop, punchy arcade-style sound effects for power-ups.  
 - **UI**: Minimalist, clear HUD with pixel-fonts and visual effects for upgrades
 

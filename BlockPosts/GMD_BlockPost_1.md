@@ -4,7 +4,7 @@ The Rollaball assignment for the Game Develoupment course is my second time ever
 
 I've followed the Rollaball tutorial on the Unity website and I feel that this has been a great introduction on how to use Unity, and I found the tutorial very easy to follow. I did however have my first challenge very early on in the project, when getting my ball to roll. The tutorial made it look very easy with just adding a player input component, and then it auto generated a Input Action Asset, which they didn't explain much about in the tutorial.
 
-![Input Action Asset Icon](image.png)
+![Input Action Asset Icon](Images/InputAction.png)
 
 I could for the longest time not figure out why my ball didn't roll, when I followed the tutorial exactly as shown. It turns out that my program did not auto generate this file. Luckily I could make one myself, and with that solved, my ball rolled. afterwards I didn't have any other problems with the tutorial.
 

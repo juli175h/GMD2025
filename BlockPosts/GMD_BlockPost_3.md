@@ -4,12 +4,17 @@ In this post, I’ll walk through the work completed for Milestone 1 of my GMD1 
 ## Player Physics  
 The player GameObject uses a Rigidbody2D component with the Body Type set to Dynamic. This allows the player to be physically pushed by enemies, adding an extra layer of tension during combat. Since this is a top-down game, gravity isn't needed, so it’s disabled in the project settings. I use linear damping to prevent the player from sliding too far after being pushed.
 
+![Player Rigidbody 2D in Unity Inspector](Images/PlayerRigidbody.png)![Player Capsule Collider 2D in Unity Inspecto](Images/PlayerCollider.png)
+
 I implemented 2D movement using Unity’s Input System, supporting both keyboard and Xbox gamepad input. This is important since the game will be played on VIA’s arcade machine. The player can move using WASD or arrow keys on keyboard, and the left joystick on gamepad.  
 The Unity Input System makes it very easy to add bindings for different platforms, without code changes. It’s used by simply adding a public InputAction in the script and assigning it in the Unity inspector  
 
 ```csharp
 public InputAction MoveAction;
+#code snippet from PlayerController.cs
 ```  
+
+![PlayeController script on player in Unity Inspector](Images/PlayerControllerMoveAction.png)
 
 In the code, player movement happens in both `Update()` and `FixedUpdate()`.  
 `Update()` runs once per frame, and here the `moveInput` (a Vector2) is read from the `MoveAction` of the Unity Input System.  
@@ -36,6 +41,7 @@ Putting this in `FixedUpdate()` ensures consistent speed, regardless of frame ra
  {
      rb.MovePosition(rb.position + moveInput * movementSpeed * Time.fixedDeltaTime);
  }
+ #code snippet from PlayerController.cs
 ```  
 
 ## First Weapon  
@@ -60,7 +66,10 @@ To create the first weapon (a bullet), I made an empty GameObject (`wpn_bullet`)
          SpawnDirectionalBullet(player.isFacingRight ? Vector3.right : Vector3.left);
      }
 ...
-```  
+#code snippet from BulletWeaponController.cs
+```
+
+
 The `bulletProjectile` script handles collision in `OnTriggerEnter2D()`, where it checks if the bullet hits an enemy and then applies damage.  
 ```csharp
  void OnTriggerEnter2D(Collider2D other)
@@ -72,6 +81,7 @@ The `bulletProjectile` script handles collision in `OnTriggerEnter2D()`, where i
      }
 
  }
+ #code snippet from BulletProjectile.cs
  ``` 
 
 ## Enemy Script  
@@ -89,6 +99,7 @@ In the Unity editor, each enemy is given a speed value and a reference to the pl
       else if (direction.x < 0 && isFacingRight)
           Flip();
   }
+  #code snippet from EnemyController.cs
 ```  
 The enemy has the public `TakeDamage()` function which can be called from other scripts to deal damage to the enemy. If its health reaches zero, the `Die()` function is called, which destroys the GameObject and spawns an XP prefab at its position.  
 ```csharp
@@ -105,6 +116,7 @@ The enemy has the public `TakeDamage()` function which can be called from other 
      GameObject exp = Instantiate(expPrefab);
      exp.transform.position = transform.position;
  }
+ #code snippet from EnemyController.cs
 ```  
 When making the script, I made sure to expose the values `speed`, `damage`, `maxHealth`, as well as the XP prefab, to make the script generic. That way I can create different enemy types, using the same script and just changing values in the inspector.  
 

@@ -7,12 +7,14 @@ The second weapon is an area-of-effect splatter attack that functions similarly 
 The projectile’s arc is calculated by interpolating between the start and target positions using `Mathf.Sin()` to simulate height, giving it a natural arc-like trajectory.
 ```csharp
 float height = Mathf.Sin(progress * Mathf.PI) * arcHeight;
+#code snippet from SplatterProjectile.cs
 ``` 
 To make the projectile face the direction it's moving, I calculate a movement vector and apply rotation using `Mathf.Atan2()` and `Quaternion.Euler()`:
 ```csharp
 Vector3 direction = (newPos - transform.position).normalized;
 float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 transform.rotation = Quaternion.Euler(0, 0, angle);
+#code snippet from SplatterProjectile.cs
 ``` 
 The actual damage-over-time effect is handled by the `SplatterPool` script attached to the splatter prefab. It uses `OnTriggerStay2D()` to track enemies inside the zone, storing individual timers for each one in a `Dictionary<EnemyController, float>` to apply damage at regular intervals. Once an enemy’s timer exceeds the tick rate, it takes damage and the timer resets.
 ```csharp
@@ -36,6 +38,7 @@ private void OnTriggerStay2D(Collider2D other)
         }
     }
 }
+#code snippet from SplatterPool.cs
 ``` 
 `OnTriggerExit2D()` is used to remove enemies from the dictionary once they leave the zone.  
 ```csharp
@@ -50,6 +53,7 @@ private void OnTriggerExit2D(Collider2D other)
         }
     }
 }
+#code snippet from SplatterPool.cs
 ``` 
 ## Shield and Speed Boost
 
@@ -62,6 +66,7 @@ if(level > 0)
     SpeedBoostAction.performed += OnSpeedBoostPressed;
     SpeedBoostUI.gameObject.SetActive(true);
 }
+#code snippet from SpeedBoostController.cs
 ``` 
 When triggered, it starts a coroutine called `SpeedBoost()`. This temporarily multiplies the player's movement speed, waits for a set duration, and then restores the original speed.
 ```csharp
@@ -83,11 +88,15 @@ IEnumerator SpeedBoost()
     EventSystem.current.SetSelectedGameObject(null);
     SpeedBoostUI.gameObject.GetComponent<Image>().color = disabledColor;
 }
+#code snippet from SpeedBoostController.cs
 ``` 
 
 ## Slider UI
 
 A core part of the game’s UI is built using Unity’s `Slider` component, which is reused across the XP bar, the player’s health bar, and each enemy’s health bar. As a child component they have a colored image dragged into the fill property of the slider component in the inspector.
+
+![Unity Screensot showing XPBar half filled](Images/XPSliderHalf.png)
+![Unity Screensot showing XPBar fully filled](Images/XPSliderFull.png)
 
 The bar script attached have two public methods, `SetMaxValue(int value)` and `public void SetValue(float value)`. These methods are called from other scripts to update the bar’s values during gameplay, for example, when the player gains XP.
 ```csharp
@@ -103,8 +112,12 @@ public void SetValue(float value)
     if (fill != null)
         fill.color = gradient.Evaluate(slider.normalizedValue);
 }
+#code snippet from bar.cs
+
 ``` 
 It’s also possible to apply a gradient with the script by adding a reference to the fill in the inspector and making a gradient. This is done for the enemies’ health bar, making it change from green to red according to the value.
+
+![Bar script on HealthBar on enemy prefab](Images/BarScriptOnEnemy.png)
 
 ## Conclusion
 
