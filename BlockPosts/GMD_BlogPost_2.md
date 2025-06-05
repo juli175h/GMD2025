@@ -31,4 +31,3 @@ Free assets from Unity Store will be utilized, as well as assets found on the in
 2. **Abilities, Weapons & Overlay**: Add an area-effect weapon, an active speed boost ability, and a short invincibility ability. Make UI for game overlay. 
 3. **Progression System**: Implement weapon leveling (e.g. more projectiles), evolving enemy waves. Finishing touches (menu, sound, etc.) 
 
-This design allows for flexible scaling, making it feasible for solo development while leaving room for polish and expansion if time allows.
